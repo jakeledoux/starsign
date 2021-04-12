@@ -86,9 +86,16 @@ def make_image(qr, type='png', write=False, filename=None, logo=False,
 
 
 if __name__ == '__main__':
+    # Create Stellar payment URI
     uri  = request_payment(
         'GBCOKLTKFJRR45RJBA336OE3ACKMFCLSODLHP6TTTNFVHVPXU7TW5U7F',
         amount=10, memo='Just a tip :)'
     )
+    # Make QR code from URI
     qr = make_qr(uri)
-    img = make_image(qr, logo=True, write=True)
+
+    # Print to screen
+    qr.print_ascii()
+
+    # Write to file
+    # img = make_image(qr, logo=True, write=True)
