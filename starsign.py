@@ -36,8 +36,7 @@ def request_payment(destination: str, amount: Optional[str] = None,
                       msg=msg)
 
 
-def make_qr(uri: str) \
-        -> qrcode.QRCode:
+def make_qr(uri: str) -> qrcode.QRCode:
     ''' Creates a QR code from URI.
     '''
 
